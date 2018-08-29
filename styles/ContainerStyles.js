@@ -23,7 +23,15 @@ var ContainerStyles = StyleSheet.create({
   textConfig: {
     fontSize: 24,
     color: '#FFFFFF',
-  }
+  },
+
+  dividerButton: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 0.5,
+    borderColor: '#91AA9D'
+  },
 
 });
 

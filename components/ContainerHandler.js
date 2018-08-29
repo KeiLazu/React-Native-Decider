@@ -4,12 +4,19 @@ import React, {
 
 import {
   View,
-  Text
+  Text,
+  Alert
 } from 'react-native';
 
 import ContainerStyles from '../styles/ContainerStyles';
+import DeciderButton from './DeciderButton';
 
 export default class ContainerHandler extends Component {
+
+  _AlertMessage(input){
+    alert(input)
+  }
+
   render(){
     return(
       <View style={ContainerStyles.rootContainer}>
@@ -19,7 +26,14 @@ export default class ContainerHandler extends Component {
           </Text>
         </View>
         <View style={ContainerStyles.displayDivider}>
-
+          <DeciderButton 
+            textValue={"Yes"}
+            onPress={this._AlertMessage.bind(this, "yes")}
+          />
+          <DeciderButton 
+            textValue="No"
+            onPress={this._AlertMessage.bind(this, "no")}
+          />
         </View>
       </View>
     );
